@@ -24,11 +24,6 @@ import java.util.Date;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException, RuntimeException, ParseException, SQLException {
-//        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-//        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-//        stage.setTitle("Hello!");
-//        stage.setScene(scene);
-//        stage.show();
 
         int startSpace = 15;
         FlightUtil.createTable();
@@ -81,8 +76,7 @@ public class HelloApplication extends Application {
         button.setTranslateY(200);
 
 
-        Group root = new Group(); // ganlagebis menejeri
-        //   root.getChildren().add(button);
+        Group root = new Group(); 
         root.getChildren().add(textField1);
         root.getChildren().add(label1);
         root.getChildren().add(textField2);
@@ -93,28 +87,15 @@ public class HelloApplication extends Application {
         root.getChildren().add(textField4);
         root.getChildren().add(pieChart);
         root.getChildren().add(button);
-//        root.getChildren().add(textField2);
-//        root.getChildren().add(button1);
-//        root.getChildren().add(button2);
-//        root.getChildren().add(text);
+
 
          button.setOnAction(actionEvent -> {
              String direction = textField1.getText();
-//
-//             DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-   //            Date date = new Date(textField2.getText());
-//             System.out.println(dateFormat.format(date));
-
-
-//             localDateTime = LocalDateTime.parse(textField2.getText());
-
-
 
              int number = Integer.parseInt(textField3.getText());
              float price = Float.parseFloat(textField4.getText());
              LocalDate localDate = LocalDate.parse(textField2.getText());
              System.out.println(direction);
-           //  System.out.println(date);
              System.out.println(number);
              System.out.println(localDate);
              System.out.println(price);
